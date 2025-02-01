@@ -1,68 +1,63 @@
 import tkinter as tk
-import customtkinter
 from tkinter import Grid, ttk
 
 # MAIN WINDOW
 
-root = customtkinter.CTk()
+root = tk.Tk()
 root.geometry("780x420")
 root.title("MSU-IIT Students")
-root.resizable(width=True, height=True)
-
-frame = ttk.Frame(root)
-frame.pack(padx=20, pady=20, fill='both', expand=True)
 
 # WIDGETS
 
 #Header
-Header = ttk.Label(             frame,   text="Welcome to MSU-IIT",                font=('Arial', 20))
+Header = ttk.Label(             root,   text="Welcome to MSU-IIT",                font=('Arial', 20))
 
 # Labels
-FirstNameLabel = ttk.Label(     frame,   text="First Name",                        font=('Arial', 7))
-LastNameLabel = ttk.Label(      frame,   text="Last Name",                         font=('Arial', 7))
-EmailLabel = ttk.Label(         frame,   text="Email",                             font=('Arial', 7))
-AgeLabel = ttk.Label(           frame,   text="Age",                               font=('Arial', 7))
-IDLabel = ttk.Label(            frame,   text="ID Number(YYYY-NNNN)",              font=('Arial', 7))
-GenderLabel = ttk.Label(        frame,   text="Gender",                            font=('Arial', 7))
-CollegeLabel = ttk.Label(       frame,   text="College",                           font=('Arial', 7))
-CourseLabel = ttk.Label(        frame,   text="Course",                            font=('Arial', 7))
-YearLabel = ttk.Label(          frame,   text="Year Level",                        font=('Arial', 7))
-StatusLabel = ttk.Label(        frame,   text="Status",                            font=('Arial', 7))
+FirstNameLabel = ttk.Label(     root,   text="First Name",                        font=('Arial', 7))
+LastNameLabel = ttk.Label(      root,   text="Last Name",                         font=('Arial', 7))
+EmailLabel = ttk.Label(         root,   text="Email",                             font=('Arial', 7))
+AgeLabel = ttk.Label(           root,   text="Age",                               font=('Arial', 7))
+IDLabel = ttk.Label(            root,   text="ID Number(YYYY-NNNN)",              font=('Arial', 7))
+GenderLabel = ttk.Label(        root,   text="Gender",                            font=('Arial', 7))
+CollegeLabel = ttk.Label(       root,   text="College",                           font=('Arial', 7))
+CourseLabel = ttk.Label(        root,   text="Course",                            font=('Arial', 7))
+YearLabel = ttk.Label(          root,   text="Year Level",                        font=('Arial', 7))
+StatusLabel = ttk.Label(        root,   text="Status",                            font=('Arial', 7))
 
 # EntryBoxes
-FirstNameEntryBox = ttk.Entry(  frame,   font=('Arial', 9), width = 35)
-LastNameEntryBox = ttk.Entry(   frame,   font=('Arial', 9), width = 35)
-EmailEntryBox = ttk.Entry(      frame,   font=('Arial', 9), width = 35)
-AgeEntryBox = ttk.Entry(        frame,   font=('Arial', 9), width = 16)
-IDEntryBox = ttk.Entry(         frame,   font=('Arial', 9), width = 35)
+FirstNameEntryBox = ttk.Entry(  root,   font=('Arial', 9), width = 35)
+LastNameEntryBox = ttk.Entry(   root,   font=('Arial', 9), width = 35)
+EmailEntryBox = ttk.Entry(      root,   font=('Arial', 9), width = 35)
+AgeEntryBox = ttk.Entry(        root,   font=('Arial', 9), width = 16)
+IDEntryBox = ttk.Entry(         root,   font=('Arial', 9), width = 35)
 
 # Dropdowns
-YearEntryBox = ttk.Combobox(    frame,   state="readonly", 
+YearEntryBox = ttk.Combobox(    root,   state="readonly", 
                                         values=["1st Year", "2nd Year", 
                                                 "3rd Year", "4th Year"], 
                                                 width = 35)
 
-GenderEntryBox = ttk.Combobox(  frame,   state="readonly", 
+GenderEntryBox = ttk.Combobox(  root,   state="readonly", 
                                         values=["Male", "Female", "Other"], 
                                         width = 16)
 
-CollegeEntryBox = ttk.Combobox( frame,   state="readonly", 
+CollegeEntryBox = ttk.Combobox( root,   state="readonly", 
                                         values=["College of Science", "College of Arts", 
                                                 "College of Engineering", "College of Business"], 
                                         width = 35)
 
-CourseEntryBox = ttk.Combobox(  frame,   state="readonly", 
+CourseEntryBox = ttk.Combobox(  root,   state="readonly", 
                                         values=["Computer Science", "Business Administration", 
                                                 "Civil Engineering", "Psychology"], 
                                         width = 35)
 
-StatusEntryBox = ttk.Combobox( frame,   state="readonly", 
+StatusEntryBox = ttk.Combobox( root,   state="readonly", 
                                         values=["Computer Science", "Business Administration", 
                                                 "Civil Engineering", "Psychology"], 
                                         width = 38)
 
 # Buttons
-SignUpButton = ttk.Button( frame, text = "Sign Up") 
+SignUpButton = ttk.Button( root, text = "Sign Up") 
 
 # GRID SETUP
 
@@ -105,10 +100,21 @@ YearLabel.grid(         row=6,  column=4, columnspan = 2,   padx=5, pady=1, stic
 SignUpButton.grid(      row=7,  column=4, columnspan = 2,   padx=5, pady=2, sticky='e')
 
 # Grid Configurations
-for i in range(7):  # 3 columns
-    frame.columnconfigure(i, weight=1)  # Allow all columns to expand
+# Grid.rowconfigure(      root, 0, weight=3)
+# Grid.rowconfigure(      root, 1, weight=1)
+# Grid.rowconfigure(      root, 2, weight=1)
+# Grid.rowconfigure(      root, 3, weight=1)
+# Grid.rowconfigure(      root, 4, weight=1)
+# Grid.rowconfigure(      root, 5, weight=1)
+# Grid.rowconfigure(      root, 6, weight=1)
+# Grid.rowconfigure(      root, 7, weight=1)
 
-for i in range(8):  # 11 rows
-    frame.rowconfigure(i, weight=1)  # Allow all rows to expand
+# Grid.columnconfigure(   root, 0, weight=1)
+# Grid.columnconfigure(   root, 1, weight=1)
+# Grid.columnconfigure(   root, 2, weight=1)
+# Grid.columnconfigure(   root, 3, weight=1)
+# Grid.columnconfigure(   root, 4, weight=1)
+# Grid.columnconfigure(   root, 5, weight=1)
+# Grid.columnconfigure(   root, 6, weight=1)
 
 root.mainloop()
