@@ -1,6 +1,6 @@
 import tkinter as tk
 # import customtkinter
-from tkinter import Grid, ttk
+from tkinter import ttk
 import csv
 
 # MAIN WINDOW
