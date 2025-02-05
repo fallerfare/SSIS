@@ -3,6 +3,8 @@ import tkinter as tk
 from tkinter import ttk
 import csv
 
+# pipenv shell --> pipenv install m
+
 # MAIN WINDOW
 
 root = tk.Tk()

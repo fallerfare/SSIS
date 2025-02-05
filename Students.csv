@@ -1,4 +1,346 @@
-ID,First Name,Last Name,Email,Year Level,Gender,Program Code,Status
+    ID,First Name,Last Name,Email,Year Level,Gender,Program Code,Status
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
+2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
+2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
+k,kkk,k,k,3rd Year,Male,BSP,Student
+2023-1035,Marcus Miguel,Cuaton,marcusmiguel.cuaton@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
+2023-0120,Vidal I,Serate,vidali.serate@g.msuiit.edu.ph,1st Year,Other,BSCS,Student
 2023-0171,Joshua Louise,Villanueva,joshualouise.villanueva@g.msuiit.edu.ph,2nd Year,Male,BSCS,Student
 2017-0100,Dotua Wuwis,Bilanweba,joshualouisevillanueva@gmail.com,2nd Year,Male,BSCS,Student 
 2010-0012,Farethee,Faller,fallerfaree@gmail.com,3rd Year,Female,BSP,Student
