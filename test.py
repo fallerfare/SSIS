@@ -1,72 +1,40 @@
+from pandastable import Table
+import pandas as pd
 import tkinter as tk
-# import customtkinter
 from tkinter import ttk
-import csv
 
+class StudentTable():
+    def __init__(self, root, dataframe):
+        self.frame = tk.Frame(root)
+        self.frame.pack(padx=20, pady=20)
 
-# MAIN WINDOW
-if __name__ =="__main__":
-        root = tk.Tk()
-        root.geometry("900x860")
-        root.title("MSU-IIT Students")
-        root.resizable(width=True, height=True)
+        # Use the passed dataframe
+        self.table = Table(self.frame, dataframe=dataframe)
+        self.table.show()
 
-        # Panedwindow
-        paned = ttk.PanedWindow(root, width = 800)
-        paned.grid(row=1, column=0, pady=(25, 5), sticky="nsew")
+if __name__ == "__main__":
+    root = tk.Tk()
+    root.geometry("900x860")
+    root.title("MSU-IIT Students")
+    root.resizable(width=True, height=True)
 
-        # Pane #1
-        pane_1 = ttk.Frame(paned)
-        paned.add(pane_1, weight=1)
+    # Load the DataFrame
+    df = pd.read_csv('Students.csv')
 
-        # Create a Frame for the Treeview
-        treeFrame = ttk.Frame(pane_1)
-        treeFrame.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
+    # Panedwindow
+    RepoTable = ttk.PanedWindow(root, width = 800)
+    RepoTable.grid(row=1, column=0, pady=(25, 5), sticky="nsew")
 
-        # Scrollbar
-        treeScroll = ttk.Scrollbar(treeFrame)
-        treeScroll.pack(side="right", fill="y")
+    # Pane #1
+    tablepane = ttk.Frame(RepoTable)
+    RepoTable.add(tablepane, weight=1)
 
-        # Treeview
-        Repository = ttk.Treeview(treeFrame, selectmode="extended", yscrollcommand=treeScroll.set, columns=(1, 2), height=12, show='headings')
-        Repository.pack(expand=True, fill="both")
-        treeScroll.config(command=Repository.yview)
+    # Pane #2
+    searchpane = ttk.Frame(RepoTable)
+    RepoTable.add(searchpane, weight=1)
 
-        canvas = tk.Canvas(treeFrame, bg="white")
-        canvas.pack(expand=True, fill="both")
+    # Instantiate the PandaApp with the DataFrame
+    table = StudentTable(tablepane, df)
 
-        with open('Students.csv', newline = '') as t:
-                          StudentDetails = csv.reader(t)
-                          headers = next(StudentDetails)
-                          Repository['columns'] = headers
-
-                          for header in headers:
-                                i = 1
-                                Repository.heading(header, text = header)
-                                Repository.column(header, anchor = 'center')
-
-                          for row in StudentDetails:
-                                Repository.insert("","end",values=row)
-
-                                x = Repository.bbox(i)[0] + Repository.winfo_x()  # Get the x position of the column
-                                canvas.create_line(x, 0, x, treeFrame.winfo_height(), fill="black")
-
-                                y = Repository.bbox(i)[0] + Repository.winfo_y()  # Get the x position of the column
-                                canvas.create_line(0, y, treeFrame.winfo_width(), fill="black")
-
-                
-        for i in range(1, 3, 5, 7):  
-                y = Repository.bbox(i)[1] + Repository.winfo_y()  # Get the y position of the column
-                canvas.create_line(y, 0, y, treeFrame.winfo_wight(), fill="black")
-
-        # Define the columns
-        Repository.column(0, width=75, anchor="center")
-        Repository.column(1, width=100, anchor="center")          
-        Repository.column(2, width=100, anchor="center")  
-        Repository.column(3, width=100, anchor="center")  
-        Repository.column(4, width=100, anchor="center")  
-        Repository.column(5, width=100, anchor="center")  
-        Repository.column(6, width=100, anchor="center")  
-        Repository.column(7, width=100, anchor="center") 
-
-        root.mainloop()
+    # Start the Tkinter main loop
+    root.mainloop()

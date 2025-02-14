@@ -13,7 +13,7 @@ root.title("MSU-IIT Students")
 root.resizable(width=True, height=True)
 
 frame = ttk.Frame(root)
-frame.pack(padx=20, pady=20, fill='both', expand=True)
+frame.pack(padx=20, pady=20, fill='both', expand=False)
 
 # WIDGETS
 
