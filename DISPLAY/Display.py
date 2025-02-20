@@ -1,4 +1,4 @@
-class Display:
+class Display():
     def __init__(self, root, dataframe):
         self.root = root
         self.dataframe = dataframe
@@ -17,4 +17,3 @@ class Display:
                     tree.insert("", "end", values=list(row), tags=('evenrow', ))
             else:
                     tree.insert("", "end", values=list(row), tags=('oddrow', ))
-

@@ -7,26 +7,20 @@ class Table(Display):
 
             # Scrollbar
             treeScroll = ttk.Scrollbar(root)
-            treeScroll.pack(side="right", fill="y")
-
-            self.style = ttk.Style()
-            self.style.configure(   "Treeview", 
-                                    background =        "#ffffff", 
-                                    foreground =        "#000000",
-                                    rowheight =         25,
-                                    fieldbackground =   "#ffffff")
+            treeScroll.pack(side="right", fill='y')
 
             self.tree = ttk.Treeview(root,  selectmode =        "browse", 
                                             show =              'headings', 
                                             yscrollcommand =    treeScroll.set, 
-                                            style =             "Treeview")
+                                            style =             "Treeview"
+                                    )
             self.tree['columns'] = self.headers
             
             for col in dataframe.columns:
                   self.tree.heading(col, text = col)
-                  self.tree.column(col, width= 100, anchor = 'center')
+                  self.tree.column(col, width = 100, anchor = 'center')
 
             self.Populate(self.tree, self.dataframe)
 
-            self.tree.pack(side="left", fill="y")
+            self.tree.pack(side="left", fill="both", anchor = "center", expand=True)
             treeScroll.config(command=self.tree.yview)

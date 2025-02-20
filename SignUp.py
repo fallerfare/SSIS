@@ -1,9 +1,6 @@
 import tkinter as tk
-# import customtkinter
 from tkinter import ttk
 import csv
-
-# pipenv shell --> pipenv install m
 
 # MAIN WINDOW
 
