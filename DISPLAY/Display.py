@@ -17,3 +17,5 @@ class Display():
                     tree.insert("", "end", values=list(row), tags=('evenrow', ))
             else:
                     tree.insert("", "end", values=list(row), tags=('oddrow', ))
+    
+    

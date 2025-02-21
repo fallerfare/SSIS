@@ -1,6 +1,7 @@
 from DISPLAY.Table import Table
 from DISPLAY.Filter import Filter
 from tkinter import ttk
+from ADD import Add
 
 class Repo(ttk.Frame):
     def __init__(self, root, dataframe):
@@ -19,6 +20,11 @@ class Repo(ttk.Frame):
         tablepane = ttk.Frame(RepoTable)
         tablepane.grid(row = 2, column=0, sticky="nsew", pady=15)
 
+        # Button
+        buttonframe = ttk.Frame(RepoTable)
+        buttonframe.grid(row = 3, column=0, sticky="e", pady=15)
+
         # Display Elements
         table = Table(tablepane, self.dataframe)
         search = Filter(searchpane, self.dataframe, table)
+        button = Add.Add(buttonframe, self.dataframe.columns[0])
