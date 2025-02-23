@@ -1,9 +1,10 @@
 from tkinter import ttk
-from DISPLAY.Display import Display
+from DATA import GlobalDFs
 
-class Filter(Display):
+class Filter():
     def __init__(self, root, dataframe, table):
-        super().__init__(root, dataframe)
+        self.root = root
+        self.dataframe = GlobalDFs.updateDF(dataframe)
         self.table = table
 
         searchnsortframe = ttk.Frame(root)
@@ -34,27 +35,28 @@ class Filter(Display):
         sortbylabel.grid(       row = 0, column = 4)
         self.sortbybar.grid(    row = 0, column = 5)
 
+    def perform_search(self, event):
+        self.dataframe = GlobalDFs.updateDF(self.dataframe)
+        search_term = self.searchbar.get().lower()
+            
+        filtered_df = self.table.dataframe[self.table.dataframe.apply(lambda row: row.astype(str).str.lower().str.contains(search_term).any(), axis=1)]
+
+        self.table.Populate(self.table.tree, filtered_df)
     def perform_sort(self, event):
+        self.dataframe = GlobalDFs.updateDF(self.dataframe)
         sortwithkey = self.sortwithbar.get()
         sortbykey = self.sortbybar.get()
-    
-        if not sortwithkey:
-            return  # Avoid sorting if no column is selected
         
-        if not sortbykey:
+        if not sortwithkey or not sortbykey:
             return  # Avoid sorting if no column is selected
 
         ascending = sortbykey == "Ascending"
 
         # Sort the dataframe
-        self.dataframe = self.dataframe.sort_values(by=[sortwithkey], ascending=ascending)
+        sorted_df = self.table.dataframe.sort_values(by=[sortwithkey], ascending=ascending)
+
+        # Update the table's dataframe reference
+        self.table.dataframe = sorted_df
 
         # Repopulate the table with sorted data
-        self.Populate(self.table.tree, self.dataframe)
-
-    def perform_search(self, event):
-        search_term = self.searchbar.get().lower()
-            
-        filtered_df = self.table.dataframe[self.table.dataframe.apply(lambda row: row.astype(str).str.lower().str.contains(search_term).any(), axis=1)]
-
-        self.Populate(self.table.tree, filtered_df)
+        self.table.Populate(self.table.tree, sorted_df)

@@ -1,8 +1,8 @@
 from tkinter import ttk
 import tkinter as tk
-import pandas as pd
 import TKinterModernThemes as TKMT
 from DISPLAY.Repo import Repo
+from DATA import GlobalDFs
 
 # MAIN WINDOW
 if __name__ =="__main__":
@@ -20,21 +20,16 @@ if __name__ =="__main__":
       # Header
       HeaderFrame = tk.Frame(window.root, background = "maroon")
       HeaderFrame.pack()
-      Title = ttk.Label(HeaderFrame, text="MSU - IIT Students Repository", font=('Arial', 30), anchor = "center", background = "maroon", width = 800)
-      Title.pack(padx = 15, pady = 25)
+      Title = ttk.Label(HeaderFrame, text="MSU - IIT Students Repository", font=('Arial', 20), anchor = "center", background = "maroon", width = 800)
+      Title.pack(padx = 15, pady = 15)
 
       # Tabs
       notebook = ttk.Notebook(window.root)
       notebook.pack(padx = 35, pady = 35, anchor= "center")
 
-      # Separate tables for each dataframe
-      df1 = pd.read_csv(r'DATA\Students.csv')
-      df2 = pd.read_csv(r'DATA\Programs.csv')
-      df3 = pd.read_csv(r'DATA\Colleges.csv')
-
-      RepoTable1 = Repo(notebook, df1)
-      RepoTable2 = Repo(notebook, df2)
-      RepoTable3 = Repo(notebook, df3)
+      RepoTable1 = Repo(notebook, GlobalDFs.readStudentsDF())
+      RepoTable2 = Repo(notebook, GlobalDFs.readProgramsDF())
+      RepoTable3 = Repo(notebook, GlobalDFs.readCollegesDF())
 
       notebook.add(RepoTable1, text="Students")
       notebook.add(RepoTable2, text="Programs")
