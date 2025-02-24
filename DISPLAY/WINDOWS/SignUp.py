@@ -182,5 +182,3 @@ class SignUpWindow:
             Exceptions.show_inputerror_message(ve)
         except Exception as e:
             Exceptions.show_unexpected_error(e)
-
-        

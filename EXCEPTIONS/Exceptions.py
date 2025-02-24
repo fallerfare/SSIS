@@ -1,12 +1,27 @@
 from tkinter import messagebox
 import re
 
+
+
+# =======================
+# ACCEPTED ENTRY FORMATS
+# =======================
 NormalEntry = re.compile(r"^[A-Z][a-z]+(?:\s[A-Z][a-z]+)*$")
+ProgramEntry = re.compile(r"^Bachelor of [A-Za-z\s]+$")
+CollegeEntry = re.compile(r"^College of [A-Za-z\s]+$")
 IDEntry = re.compile(r"^\d{4}-\d{4}$")
 EmailEntry = re.compile(r"^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$")
 CodeEntry = re.compile(r"^[A-Za-z]{3,6}$")
 YearEntry = re.compile(r"^[1-5](st|nd|rd|th) (Year|Year and Above)$")
+# =======================
+# ACCEPTED ENTRY FORMATS
+# =======================
 
+
+
+# =======================
+#      CHECK INPUTS
+# =======================
 def validate_inputs(input_dict):
     """
     Validates that all inputs are filled and match the expected pattern.
@@ -23,7 +38,15 @@ def validate_inputs(input_dict):
         
     if input_errors:
          raise ValueError("\n".join(input_errors))
+# =======================
+#      CHECK INPUTS
+# =======================
 
+
+
+# =======================
+#     SHOW FUNCTIONS
+# =======================
 def show_inputerror_message(error):
     """
     Displays an error message in a pop-up.
@@ -37,3 +60,6 @@ def show_unexpected_error(error):
     :param error: The unexpected error message
     """
     messagebox.showerror("Unexpected Error", f"An error occurred: {str(error)}")
+# =======================
+#     SHOW FUNCTIONS
+# =======================

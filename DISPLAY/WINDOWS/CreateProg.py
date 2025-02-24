@@ -64,7 +64,7 @@ class CreateProgWindow:
             college_code = self.CollegeEntryBox.get().strip()
             
             Exceptions.validate_inputs({
-                                        "Program Name" : (program_name, Exceptions.NormalEntry),
+                                        "Program Name" : (program_name, Exceptions.ProgramEntry),
                                         "Program Code" : (program_code, Exceptions.CodeEntry),
                                         "College Code" : (college_code, Exceptions.CodeEntry)
             })  

@@ -4,6 +4,7 @@ import DISPLAY.BUTTONS.Remove as Remove
 import DISPLAY.BUTTONS.Edit as Edit
 
 class Buttons:
+
     def __init__(self, root, dataframe, table):
         self.root = root
         self.dataframe = GlobalDFs.updateDF(dataframe)
@@ -35,7 +36,9 @@ class Buttons:
 
             selected_value = self.tree.item(self.selected_item, "values")[0]
             self.remove_button.setremovekey(selected_value) 
-            print(f"Selected: {selected_value}")
+            
+            # Debugging
+            # print(f"Selected: {selected_value}")
 
         else:
             self.remove_button.Button.config(state="disabled")

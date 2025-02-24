@@ -52,8 +52,8 @@ class CreateCollgWindow:
             college_name = self.CollegeNameEntryBox.get().strip()
             college_code = self.CollegeCodeEntryBox.get().strip()
             
-            Exceptions.validate_input({
-                                        "College Name" : (college_name, Exceptions.NormalEntry),
+            Exceptions.validate_inputs({
+                                        "College Name" : (college_name, Exceptions.CollegeEntry),
                                         "College Code" : (college_code, Exceptions.CodeEntry)
 
             })

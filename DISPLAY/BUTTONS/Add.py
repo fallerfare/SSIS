@@ -1,13 +1,19 @@
 from tkinter import ttk
-from DISPLAY.BUTTONS import SignUp, CreateCollg, CreateProg
+from DISPLAY.WINDOWS import SignUp, CreateCollg, CreateProg
 from DATA import GlobalDFs
 
+
+# =====================
+#     ADD BUTTON
+# =====================
 class Add:
     def __init__(self, root, dataframe, table):
+        # Err you know innit
         self.root = root
         self.dataframe = GlobalDFs.updateDF(dataframe)
         self.table = table
 
+        # Format Add Button according to tab
         match dataframe.columns[0]:  
             case "ID":
                 command = lambda: SignUp.SignUpWindow(self.table, "Add")
@@ -22,3 +28,6 @@ class Add:
                 buttext = "What, no button???"
 
         self.Button = ttk.Button(self.root, text=buttext, command=command)
+# =====================
+#     ADD BUTTON
+# =====================
