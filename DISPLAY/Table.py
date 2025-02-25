@@ -8,7 +8,7 @@ class Table():
 
             # Scrollbar
             treeScroll = ttk.Scrollbar(root)
-            treeScroll.pack(side="right", fill='y')
+            treeScroll.pack(side="right", fill='y', anchor="center")
 
             self.tree = ttk.Treeview(root,  selectmode =        "browse", 
                                             show =              'headings', 
