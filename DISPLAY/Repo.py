@@ -30,28 +30,9 @@ class Repo:
         self.buttonframe.grid(row = 3, column=0, sticky="e", pady=15)
 
         # Display Elements
-        self.table = Table(self.tablepane, self.dataframe)
+        self.table = Table(self.tablepane, self.dataframe, self.notebook)
         self.search = Filter(self.searchpane, self.dataframe, self.table)
         self.button = Buttons(self.buttonframe, self.dataframe, self.table)
-
-        self.notebook.bind("<<NotebookTabChanged>>", self.on_change)
-
-    def on_change(self, event):
-        print("Tab changed")
-        selected_tab = self.notebook.select()
-        tab_name = self.notebook.tab(selected_tab, "text")
-        print(tab_name)
-
-        match tab_name:
-            case "Students":
-                self.dataframe = GlobalDFs.readStudentsDF()
-                self.table.Populate(self.table.tree, self.dataframe)
-            case "Programs":
-                self.dataframe = GlobalDFs.readProgramsDF()
-                self.table.Populate(self.table.tree, self.dataframe)
-            case "Colleges":
-                self.dataframe = GlobalDFs.readCollegesDF()
-                self.table.Populate(self.table.tree, self.dataframe)
 
     def returnFrame(self):
         return self.RepoTable

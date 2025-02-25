@@ -17,12 +17,12 @@ ID,First Name,Last Name,Email,Year Level,Gender,Program Code
 2023-0192,Christine,Lao,christine.lao@yahoo.com,4th Year,Female,BSeC
 2023-0193,Nathaniel,Go,nathaniel.go@gmail.com,1st Year,Male,BSeT
 2023-0194,Isabel,Co,isabel.co@outlook.com,2nd Year,Female,BEeE
-2023-0195,Mark Angelo,Lee,mark.lee@gmail.com,3rd Year,Male,BSBAe
+2023-0195,Mark Angelo,Lee,mark.lee@gmail.com,3rd Year,Male,BSCS
 2023-0196,Jessica,Dy,jessica.dy@ymail.com,4th Year,Female,BSHRM
 2023-0197,Raymond,Chan,raymond.chan@yahoo.com,2nd Year,Male,BSBAb
 2023-0198,Maricar,Lim,maricar.lim@gmail.com,1st Year,Female,BSBm
 2023-0199,Albert,Cruz,albert.cruz@hotmail.com,3rd Year,Male,BSBg
-2023-0200,Hannah,Garcia,hannah.garcia@ymail.com,4th Year,Female,BSeIE
+2023-0200,Hannah,Garcia,hannah.garcia@ymail.com,4th Year,Female,BSCA
 2023-0201,Jason,De Leon,jason.deleon@gmail.com,2nd Year,Male,BSTeI
 2023-0202,Catherine,Reyes,catherine.reyes@yahoo.com,5th Year and Above,Female,BSTeD
 2023-0203,Josephine,Roxas,josephine.roxas@outlook.com,3rd Year,Female,BSBAe
@@ -30,23 +30,18 @@ ID,First Name,Last Name,Email,Year Level,Gender,Program Code
 2023-0205,Michelle,Torres,michelle.torres@hotmail.com,2nd Year,Female,BSBAe
 2023-0206,Steven,Ang,steven.ang@ymail.com,1st Year,Male,BSCeE
 2023-0207,Nicole,Perez,nicole.perez@gmail.com,3rd Year,Female,BSMnE
-2023-0208,Richard,Manalo,richard.manalo@yahoo.com,2nd Year,Male,BSET
+2023-0208,Richard,Manalo,richard.manalo@yahoo.com,2nd Year,Male,BSIT
 2023-0209,Stephanie,Bautista,stephanie.bautista@gmail.com,4th Year,Female,BSMtE
 2023-0210,Francis,Navarro,francis.navarro@outlook.com,5th Year and Above,Male,BEeSH
-1001,Christian,Martinez,christian.martinez@gmail.com,1st Year,Male,BSCS
-2024-1002,Angela,Reyes,angela.reyes@yahoo.com,2nd Year,Female,BSIT
-2024-1003,David,Gonzales,david.gonzales@hotmail.com,3rd Year,Male,BSCA
-2024-1004,Melissa,Ortega,melissa.ortega@ymail.com,4th Year,Female,BSIS
 2024-1005,Ryan,Santiago,ryan.santiago@gmail.com,1st Year,Male,BSBAe
 2024-1006,Stephanie,Morales,stephanie.morales@yahoo.com,2nd Year,Female,BSAc
 2024-1007,Joshua,Tan,joshua.tan@hotmail.com,3rd Year,Male,BSCE
-2024-1008,Patricia,Domingo,patricia.domingo@outlook.com,4th Year,Female,BSChE
+2024-1008,Patricia,Domingo,patricia.domingo@outlook.com,4th Year,Female,BSIS
 2024-1009,Andrew,Lim,andrew.lim@gmail.com,2nd Year,Male,BSMnE
 2024-1010,Nicole,Bautista,nicole.bautista@ymail.com,3rd Year,Female,BSP
 2024-1011,Kevin,Rodriguez,kevin.rodriguez@gmail.com,1st Year,Male,BAELS
 2024-1012,Sophia,Garcia,sophia.garcia@yahoo.com,2nd Year,Female,BSeM
 2024-1013,Daniel,Lopez,daniel.lopez@hotmail.com,3rd Year,Male,BSPh
-2024-1014,Alyssa,Cruz,alyssa.cruz@gmail.com,4th Year,Female,BSN
 2024-1015,Michael,Chan,michael.chan@outlook.com,2nd Year,Male,BSTeI
 2024-1016,Marianne,Ong,marianne.ong@ymail.com,1st Year,Female,BEeE
 2024-1017,Eric,Reyes,eric.reyes@gmail.com,3rd Year,Male,BSBAm
@@ -58,10 +53,6 @@ ID,First Name,Last Name,Email,Year Level,Gender,Program Code
 2024-1023,Nathan,Go,nathan.go@yahoo.com,4th Year,Male,BSeIE
 2024-1024,Samantha,Torres,samantha.torres@ymail.com,1st Year,Female,BSTeD
 2024-1025,Rafael,Yu,rafael.yu@gmail.com,3rd Year,Male,BSBAe
-2024-1026,Katherine,Co,katherine.co@hotmail.com,2nd Year,Female,BSIT
-2024-1027,Jonathan,Diaz,jonathan.diaz@gmail.com,1st Year,Male,BSCS
-2024-1028,Lisa,Hernandez,lisa.hernandez@yahoo.com,3rd Year,Female,BSIS
-2024-1029,Brian,Rivera,brian.rivera@ymail.com,4th Year,Male,BSCA
 2024-1030,Jessica,Santos,jessica.santos@gmail.com,2nd Year,Female,BAF
 2024-1031,Paul,Mendoza,paul.mendoza@hotmail.com,1st Year,Male,BSCE
 2024-1032,Katrina,Lim,katrina.lim@outlook.com,3rd Year,Female,BSPh

@@ -174,7 +174,7 @@ class SignUpWindow:
 
 
             GlobalDFs.writeStudentsDF(newdataframe)
-            self.table.Populate(self.table.tree, newdataframe)
+            self.table.Populate(self.table.tree, newdataframe, "Update")
 
             self.root.destroy()
 

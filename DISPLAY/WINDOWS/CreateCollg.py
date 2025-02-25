@@ -77,13 +77,13 @@ class CreateCollgWindow:
 
                 newdataframe = GlobalDFs.readCollegesDF()
 
-                selected_row_index = list(newdataframe.index[newdataframe['ID'] == item_values[0]])
+                selected_row_index = list(newdataframe.index[newdataframe['College Code'] == item_values[0]])
 
                 if selected_row_index:
                     newdataframe.loc[selected_row_index[0]] = new_item_values
 
             GlobalDFs.writeCollegesDF(newdataframe)
-            self.table.Populate(self.table.tree, newdataframe)
+            self.table.Populate(self.table.tree, newdataframe, "Update")
 
             self.root.destroy()
 

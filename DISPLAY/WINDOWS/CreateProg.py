@@ -90,14 +90,14 @@ class CreateProgWindow:
 
                 newdataframe = GlobalDFs.readProgramsDF()
 
-                selected_row_index = list(newdataframe.index[newdataframe['ID'] == item_values[0]])
+                selected_row_index = list(newdataframe.index[newdataframe['Program Code'] == item_values[0]])
 
                 if selected_row_index:
                     newdataframe.loc[selected_row_index[0]] = new_item_values
 
 
             GlobalDFs.writeProgramsDF(newdataframe)
-            self.table.Populate(self.table.tree, newdataframe)
+            self.table.Populate(self.table.tree, newdataframe, "Update")
 
             self.root.destroy()
         
