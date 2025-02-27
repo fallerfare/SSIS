@@ -4,39 +4,48 @@ import tkinter as tk
 from DATA import GlobalDFs
 from EXCEPTIONS import Exceptions
 
+# ================
+# ADD BUTTON WINDOW
+# ================
 class SignUpWindow:
     def __init__(self, table, Wintype):
         self.table = table
         self.WinType = Wintype
 
+        # ================
         # MAIN WINDOW
+        
         self.root = tk.Toplevel()
         self.root.geometry("900x400")
         self.root.resizable(width=False, height=False)
-
         self.frame = ttk.Frame(self.root)
         self.frame.pack(padx=20, pady=20, anchor="center")
 
+        # MAIN WINDOW
+        # ================
+
+
+        # ================
         # WIDGETS
 
         # Header
-        self.Header = ttk.Label(self.frame, text="Welcome to MSU-IIT", font=('Arial', 20))
+        self.Header             = ttk.Label(self.frame, text="Welcome to MSU-IIT",      font=('Arial', 20))
 
         # Labels
-        self.FirstNameLabel = ttk.Label(    self.frame, text="First Name",              font=('Arial', 7))
-        self.LastNameLabel = ttk.Label(     self.frame, text="Last Name",               font=('Arial', 7))
-        self.EmailLabel = ttk.Label(        self.frame, text="Email",                   font=('Arial', 7))
-        self.IDLabel = ttk.Label(           self.frame, text="ID Number(YYYY-NNNN)",    font=('Arial', 7))
-        self.GenderLabel = ttk.Label(       self.frame, text="Gender",                  font=('Arial', 7))
-        self.CollegeLabel = ttk.Label(      self.frame, text="College",                 font=('Arial', 7))
-        self.ProgramLabel = ttk.Label(      self.frame, text="Program",                 font=('Arial', 7))
-        self.YearLabel = ttk.Label(         self.frame, text="Year Level",              font=('Arial', 7))
+        self.FirstNameLabel     = ttk.Label(self.frame, text="First Name",              font=('Arial', 7))
+        self.LastNameLabel      = ttk.Label(self.frame, text="Last Name",               font=('Arial', 7))
+        self.EmailLabel         = ttk.Label(self.frame, text="Email",                   font=('Arial', 7))
+        self.IDLabel            = ttk.Label(self.frame, text="ID Number(YYYY-NNNN)",    font=('Arial', 7))
+        self.GenderLabel        = ttk.Label(self.frame, text="Gender",                  font=('Arial', 7))
+        self.CollegeLabel       = ttk.Label(self.frame, text="College",                 font=('Arial', 7))
+        self.ProgramLabel       = ttk.Label(self.frame, text="Program",                 font=('Arial', 7))
+        self.YearLabel          = ttk.Label(self.frame, text="Year Level",              font=('Arial', 7))
 
         # Entry Boxes
-        self.FirstNameEntryBox = ttk.Entry( self.frame, font=('Arial', 9), width=35)
-        self.LastNameEntryBox = ttk.Entry(  self.frame, font=('Arial', 9), width=35)
-        self.EmailEntryBox = ttk.Entry(     self.frame, font=('Arial', 9), width=35)
-        self.IDEntryBox = ttk.Entry(        self.frame, font=('Arial', 9), width=35)
+        self.FirstNameEntryBox  = ttk.Entry(self.frame, width=35,                       font=('Arial', 9))
+        self.LastNameEntryBox   = ttk.Entry(self.frame, width=35,                       font=('Arial', 9))
+        self.EmailEntryBox      = ttk.Entry(self.frame, width=35,                       font=('Arial', 9))
+        self.IDEntryBox         = ttk.Entry(self.frame, width=35,                       font=('Arial', 9))
 
         # Dropdowns
         self.collegechoices = list(GlobalDFs.readCollegesDF()['College Code'])
@@ -47,78 +56,89 @@ class SignUpWindow:
 
             # Filter programs based on selected college
             programsincollege = GlobalDFs.readProgramsDF()[GlobalDFs.readProgramsDF()['College Code'] == College]['Program Code'].tolist()
-
-            # Update the combobox values
             self.ProgramEntryBox['values'] = programsincollege
-
-            # Clear any previous selection
             self.ProgramEntryBox.set('')
+            # Filter programs based on selected college
 
-        self.CollegeEntryBox = ttk.Combobox(self.frame, state="readonly",
-                                            values=self.collegechoices,
+        self.CollegeEntryBox    = ttk.Combobox( self.frame, state="readonly",
+                                                values=self.collegechoices,
                                             width=35)
 
         self.CollegeEntryBox.bind("<<ComboboxSelected>>", collegechosen)
 
-        self.ProgramEntryBox = ttk.Combobox(self.frame, state="readonly",
-                                            values=self.programchoices,
-                                            width=35)
+        self.ProgramEntryBox    = ttk.Combobox( self.frame, state="readonly",
+                                                values=self.programchoices,
+                                                width=35)
 
-        self.YearEntryBox = ttk.Combobox(self.frame, state="readonly",
-                                         values=["1st Year", "2nd Year",
-                                                 "3rd Year", "4th Year",
-                                                 "5th Year and Above"],
-                                         width=35)
+        self.YearEntryBox       = ttk.Combobox( self.frame, state="readonly",
+                                                values=["1st Year", "2nd Year",
+                                                        "3rd Year", "4th Year",
+                                                        "5th Year and Above"],
+                                                width=35)
 
-        self.GenderEntryBox = ttk.Combobox(self.frame, state="readonly",
-                                           values=["Male", "Female", "Other"],
-                                           width=35)
+        self.GenderEntryBox     = ttk.Combobox( self.frame, state="readonly",
+                                                values=["Male", "Female", "Other"],
+                                                width=35)
+        
+        # Buttons
         if self.WinType == "Add":
-            self.SignUpButton = ttk.Button(self.frame, text="Enroll", command=self.SignUp)
+            self.SignUpButton   = ttk.Button(self.frame, text="Enroll",         command=self.SignUp)
         elif self.WinType == "Edit":
-            self.SignUpButton = ttk.Button(self.frame, text="Confirm Edit", command=self.SignUp)
+            self.SignUpButton   = ttk.Button(self.frame, text="Confirm Edit",   command=self.SignUp)
 
+        # WIDGETS
+        # ================
+
+
+        # ================
         # GRID SETUP
 
         # Row 0
-        self.Header.grid(row=0, column=0, columnspan=6, padx=20, pady=20)
+        self.Header.grid(           row=0, column=0, columnspan=6, padx=20, pady=20)
 
         # Row 1
         self.FirstNameEntryBox.grid(row=1, column=0, columnspan=2, padx=7, pady=7, sticky='w')
-        self.LastNameEntryBox.grid(row=1, column=2, columnspan=2, padx=7, pady=7, sticky='w')
-        self.CollegeEntryBox.grid(row=1, column=4, columnspan=2, padx=7, pady=7, sticky='w')
+        self.LastNameEntryBox.grid( row=1, column=2, columnspan=2, padx=7, pady=7, sticky='w')
+        self.CollegeEntryBox.grid(  row=1, column=4, columnspan=2, padx=7, pady=7, sticky='w')
 
         # Row 2
-        self.FirstNameLabel.grid(row=2, column=0, columnspan=2, padx=5, pady=1, sticky='w')
-        self.LastNameLabel.grid(row=2, column=2, columnspan=2, padx=5, pady=1, sticky='w')
-        self.CollegeLabel.grid(row=2, column=4, columnspan=2, padx=5, pady=1, sticky='w')
+        self.FirstNameLabel.grid(   row=2, column=0, columnspan=2, padx=5, pady=1, sticky='w')
+        self.LastNameLabel.grid(    row=2, column=2, columnspan=2, padx=5, pady=1, sticky='w')
+        self.CollegeLabel.grid(     row=2, column=4, columnspan=2, padx=5, pady=1, sticky='w')
 
         # Row 3
-        self.EmailEntryBox.grid(row=3, column=0, columnspan=2, padx=7, pady=7, sticky='w')
-        self.GenderEntryBox.grid(row=3, column=2, columnspan=2, padx=2, pady=7, sticky='w')
-        self.ProgramEntryBox.grid(row=3, column=4, columnspan=2, padx=7, pady=7, sticky='w')
+        self.EmailEntryBox.grid(    row=3, column=0, columnspan=2, padx=7, pady=7, sticky='w')
+        self.GenderEntryBox.grid(   row=3, column=2, columnspan=2, padx=2, pady=7, sticky='w')
+        self.ProgramEntryBox.grid(  row=3, column=4, columnspan=2, padx=7, pady=7, sticky='w')
 
         # Row 4
-        self.EmailLabel.grid(row=4, column=0, columnspan=2, padx=5, pady=1, sticky='w')
-        self.GenderLabel.grid(row=4, column=2, columnspan=2, padx=5, pady=1, sticky='w')
-        self.ProgramLabel.grid(row=4, column=4, columnspan=2, padx=5, pady=1, sticky='w')
+        self.EmailLabel.grid(       row=4, column=0, columnspan=2, padx=5, pady=1, sticky='w')
+        self.GenderLabel.grid(      row=4, column=2, columnspan=2, padx=5, pady=1, sticky='w')
+        self.ProgramLabel.grid(     row=4, column=4, columnspan=2, padx=5, pady=1, sticky='w')
 
         # Row 5
-        self.IDEntryBox.grid(row=5, column=2, columnspan=2, padx=7, pady=7, sticky='w')
-        self.YearEntryBox.grid(row=5, column=4, columnspan=2, padx=7, pady=7, sticky='w')
+        self.IDEntryBox.grid(       row=5, column=2, columnspan=2, padx=7, pady=7, sticky='w')
+        self.YearEntryBox.grid(     row=5, column=4, columnspan=2, padx=7, pady=7, sticky='w')
 
         # Row 6
-        self.IDLabel.grid(row=6, column=2, columnspan=2, padx=5, pady=1, sticky='w')
-        self.YearLabel.grid(row=6, column=4, columnspan=2, padx=5, pady=1, sticky='w')
+        self.IDLabel.grid(          row=6, column=2, columnspan=2, padx=5, pady=1, sticky='w')
+        self.YearLabel.grid(        row=6, column=4, columnspan=2, padx=5, pady=1, sticky='w')
 
         # Row 7
-        self.SignUpButton.grid(row=7, column=4, columnspan=2, padx=5, pady=2, sticky='e')
+        self.SignUpButton.grid(     row=7, column=4, columnspan=2, padx=5, pady=2, sticky='e')
 
         self.root.mainloop()
 
-    # Buttons
+        # GRID SETUP
+        # ================
+
+    # ================
+    # SIGNUP
+
     def SignUp(self):
         try:
+
+            # Get and clean entries
             ID_number = self.IDEntryBox.get().strip()
             first_name = self.FirstNameEntryBox.get().strip()
             last_name = self.LastNameEntryBox.get().strip()
@@ -126,32 +146,41 @@ class SignUpWindow:
             year_level = self.YearEntryBox.get().strip()
             gender = self.GenderEntryBox.get().strip()
             program_code = self.ProgramEntryBox.get().strip()
+            # Get and clean entries
 
+            # Check entries' formats
             Exceptions.validate_inputs({
-                                        "ID" : (ID_number,Exceptions.IDEntry),
-                                        "First Name" : (first_name, Exceptions.NormalEntry),
-                                        "Last Name" : (last_name, Exceptions.NormalEntry),
-                                        "Email" : (email,Exceptions.EmailEntry),
-                                        "Year Level" : (year_level, Exceptions.YearEntry),
-                                        "Gender" : (gender, Exceptions.NormalEntry),
-                                        "Program Code" : (program_code, Exceptions.CodeEntry)
+                    "ID"            : (ID_number,Exceptions.IDEntry),
+                    "First Name"    : (first_name, Exceptions.NormalEntry),
+                    "Last Name"     : (last_name, Exceptions.NormalEntry),
+                    "Email"         : (email,Exceptions.EmailEntry),
+                    "Year Level"    : (year_level, Exceptions.YearEntry),
+                    "Gender"        : (gender, Exceptions.NormalEntry),
+                    "Program Code"  : (program_code, Exceptions.CodeEntry)
             })
+            # Check entries' formats
 
+            # Check entrie's duplicates
+            Exceptions.validate_studentduplicates(ID_number)
+
+            # If window was called by ADD Button
             if(self.WinType == "Add"):
                 newStudentdata = {
-                    'ID': [ID_number],
-                    'First Name': [first_name],
-                    'Last Name': [last_name],
-                    'Email': [email],
-                    'Year Level': [year_level],
-                    'Gender': [gender],
-                    'Program Code': [program_code]
+                    'ID'            : [ID_number],
+                    'First Name'    : [first_name],
+                    'Last Name'     : [last_name],
+                    'Email'         : [email],
+                    'Year Level'    : [year_level],
+                    'Gender'        : [gender],
+                    'Program Code'  : [program_code]
                 }
 
                 newStudentdf = pd.DataFrame(newStudentdata)
 
                 newdataframe = pd.concat([GlobalDFs.readStudentsDF(), newStudentdf], ignore_index=True)
-            
+            # If window was called by ADD Button
+
+            # If window was called by EDIT Button
             elif(self.WinType == "Edit"):
                 selected_item = self.table.tree.selection()
                 item_values = self.table.tree.item(selected_item, "values")
@@ -171,14 +200,25 @@ class SignUpWindow:
 
                 if selected_row_index:
                     newdataframe.loc[selected_row_index[0]] = new_item_values
+            # If window was called by EDIT Button
 
-
+            # Rewrite dataframe
             GlobalDFs.writeStudentsDF(newdataframe)
             self.table.Populate(self.table.tree, newdataframe, "Update")
 
+            # Close 
             self.root.destroy()
 
         except ValueError as ve:
             Exceptions.show_inputerror_message(ve)
+        except FileExistsError as fe:
+            Exceptions.show_duplicateerror_message(fe)
         except Exception as e:
             Exceptions.show_unexpected_error(e)
+
+    # SIGNUP
+    # ================
+
+# ================
+# ADD BUTTON WINDOW
+# ================

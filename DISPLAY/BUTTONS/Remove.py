@@ -6,6 +6,7 @@ from EXCEPTIONS import Exceptions
 # =====================
 #    REMOVE BUTTON
 # =====================
+
 class Remove:
     def __init__(self, root, dataframe, table):
         # tommy innit
@@ -35,14 +36,17 @@ class Remove:
     # accessed by treeviewselect
     def setremovekey(self, key):
         self.removekey = key
-        print("Setting: " + self.removekey)
+
+        # Debugging
+        # print("Setting: " + self.removekey)
 
     # dis guy be removed
     def remove_entry(self):
         if self.removekey is None:
             return
-
-        print("Removing: " + self.removekey)
+        
+        # Debugging
+        # print("Removing: " + self.removekey)
 
         self.dataframe = GlobalDFs.updateDF(self.dataframe) # Is this needed? idk but it make me feel safe. Applies to other uses TTOTT
 
@@ -74,6 +78,7 @@ class Remove:
                 
 
         self.removekey = None
+
 # =====================
 #    REMOVE BUTTON
 # =====================      

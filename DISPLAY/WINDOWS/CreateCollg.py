@@ -58,6 +58,8 @@ class CreateCollgWindow:
 
             })
 
+            Exceptions.validate_collegeduplicates(college_code)
+
             if self.WinType == "Add":
                 newCollegedata = {
                 'College Name': [college_name],
@@ -89,6 +91,8 @@ class CreateCollgWindow:
 
         except ValueError as ve:
             Exceptions.show_inputerror_message(ve)
+        except FileExistsError as fe:
+            Exceptions.show_duplicateerror_message(fe)
         except Exception as e:
             Exceptions.show_unexpected_error(e)
         

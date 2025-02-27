@@ -69,6 +69,8 @@ class CreateProgWindow:
                                         "College Code" : (college_code, Exceptions.CodeEntry)
             })  
 
+            Exceptions.validate_programduplicates(program_code)
+
             if self.WinType == "Add":
                 newProgramdata = {
                     'Program Name': [program_name],
@@ -103,6 +105,8 @@ class CreateProgWindow:
         
         except ValueError as ve:
             Exceptions.show_inputerror_message(ve)
+        except FileExistsError as fe:
+            Exceptions.show_duplicateerror_message(fe)
         except Exception as e:
             Exceptions.show_unexpected_error(e)
 
