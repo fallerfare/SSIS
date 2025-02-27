@@ -1,4 +1,5 @@
 from tkinter import messagebox
+from DATA import GlobalHash
 import re
 
 
@@ -38,6 +39,15 @@ def validate_inputs(input_dict):
         
     if input_errors:
          raise ValueError("\n".join(input_errors))
+    
+def validate_programremove(removekey):
+    if GlobalHash.showEnrolled(removekey):
+        raise PermissionError("There are still Students currently enrolled!\nPlease Edit or Unenroll them First.")   
+
+def validate_collegeremove(removekey):
+    if GlobalHash.showConstituents(removekey):
+        raise PermissionError("There are still Students currently enrolled!\nPlease Edit or Unenroll them First.")   
+
 # =======================
 #      CHECK INPUTS
 # =======================
@@ -47,6 +57,13 @@ def validate_inputs(input_dict):
 # =======================
 #     SHOW FUNCTIONS
 # =======================
+def show_removeerror_message(error):
+    """
+    Displays an error message in a pop-up.
+    :param error: The error message to display
+    """
+    messagebox.showerror("Remove Error", str(error))
+
 def show_inputerror_message(error):
     """
     Displays an error message in a pop-up.

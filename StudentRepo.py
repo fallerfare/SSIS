@@ -30,13 +30,13 @@ if __name__ =="__main__":
       notebook = ttk.Notebook(window.root)
       notebook.pack(padx = 35, pady = 35, anchor= "center")
 
-      RepoTable1 = Repo(notebook, notebook, GlobalDFs.readStudentsDF()).returnFrame() # Students Tab
-      RepoTable2 = Repo(notebook, notebook, GlobalDFs.readProgramsDF()).returnFrame() # Programs Tab
-      RepoTable3 = Repo(notebook, notebook, GlobalDFs.readCollegesDF()).returnFrame() # Colleges Tab
+      StudentsFrame = Repo(notebook, notebook, GlobalDFs.readStudentsDF()).returnFrame() # Students Tab
+      ProgramsFrame = Repo(notebook, notebook, GlobalDFs.readProgramsDF()).returnFrame() # Programs Tab
+      CollegesFrame = Repo(notebook, notebook, GlobalDFs.readCollegesDF()).returnFrame() # Colleges Tab
 
-      notebook.add(RepoTable1, text="Students")
-      notebook.add(RepoTable2, text="Programs")
-      notebook.add(RepoTable3, text="Colleges")
+      notebook.add(StudentsFrame, text="Students")
+      notebook.add(ProgramsFrame, text="Programs")
+      notebook.add(CollegesFrame, text="Colleges")
 
       window.root.mainloop()
 # =======================

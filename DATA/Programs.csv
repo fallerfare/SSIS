@@ -1,8 +1,8 @@
 Program Code,Program Name,College Code
-BSCS,Bachelor Of Science In Computer Studies,CSS
-BSCA,Bachelor Of Science In Computer Applications,CSS
-BSIT,Bachelor Of Science In Information Technologies,CSS
-BSIS,Bachelor Of Acience In Information Systems,CSS
+BSCS,Bachelor Of Science in Computer Science,CCS
+BSCA,Bachelor Of Science in Computer Applications,CCS
+BSIT,Bachelor Of Science in Information Technology,CCS
+BSIS,Bachelor Of Science in Information Systems,CCS
 BAELS,Bachelor Of Arts In English,CASS
 BSP,Bachelor Of Science In Psychology,CASS
 BAF,Bachelor Of Arts In Filipino,CASS
@@ -43,3 +43,4 @@ BSBAe,Bachelor Of Science In Business Administration (Economics),CBAA
 BSBAm,Bachelor Of Science In Business Administration (Entrepreneurial Marketing),CBAA
 BSHRM,Bachelor Of Science In Hotel And Restaurant Management,CBAA
 BSAc,Bachelor Of Science In Accountancy,CBAA
+BSN,Bachelor Of Science In Nursing,CHS

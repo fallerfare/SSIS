@@ -95,7 +95,7 @@ def appendCollegesDF(newCollegedf):
     collegesDF = readCollegesDF()
 
     # Append only if the ID does not already exist
-    collegesDF = pd.concat([collegesDF, newCollegedf]).drop_duplicates(subset=["Program Code"], keep="last")
+    collegesDF = pd.concat([collegesDF, newCollegedf]).drop_duplicates(subset=["College Code"], keep="last")
 
     # Save back to CSV
     writeProgramsDF(collegesDF)

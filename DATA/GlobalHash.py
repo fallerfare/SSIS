@@ -2,13 +2,16 @@ from collections import defaultdict
 from DATA import GlobalDFs
 
 def StudentHash(dataframe):
-    return defaultdict(lambda: "Student not found", dataframe.set_index("ID").to_dict(orient="index"))
+    dataframe = dataframe.drop_duplicates(subset=["ID"])
+    return dataframe.set_index("ID").to_dict(orient="index")
 
 def ProgramsHash(dataframe):
-    return defaultdict(lambda: "Program not found", dataframe.set_index("Program Code").to_dict(orient="index"))
+    dataframe = dataframe.drop_duplicates(subset=["Program Code"])
+    return dataframe.set_index("Program Code").to_dict(orient="index")
 
 def CollegesHash(dataframe):
-    return defaultdict(lambda: "Program not found", dataframe.set_index("College Code").to_dict(orient="index"))
+    dataframe = dataframe.drop_duplicates(subset=["College Code"])
+    return dataframe.set_index("College Code").to_dict(orient="index")
 
 def showEnrolled(programcode):
     Students = StudentHash(GlobalDFs.readStudentsDF())
