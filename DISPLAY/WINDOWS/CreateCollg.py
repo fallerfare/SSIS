@@ -1,7 +1,7 @@
 from tkinter import ttk
 import pandas as pd
 import tkinter as tk
-from DATA import GlobalDFs
+from DATA import GlobalDFs, GlobalHash
 from EXCEPTIONS import Exceptions
 
 class CreateCollgWindow:
@@ -17,7 +17,11 @@ class CreateCollgWindow:
         self.frame.pack(padx=20, pady=20, anchor="center")
 
         # WIDGETS
-        self.Header = ttk.Label(self.frame, text="Add College", font=('Arial', 20))
+        # Header
+        if self.WinType == "Add":
+            self.Header = ttk.Label(self.frame, text="Add a College", font=('Arial', 20))
+        elif self.WinType == "Edit":
+            self.Header = ttk.Label(self.frame, text="Edit a College", font=('Arial', 20))
 
         # Labels
         self.CollegeNameLabel = ttk.Label(self.frame, text="College Name", font=('Arial', 7))
@@ -28,7 +32,10 @@ class CreateCollgWindow:
         self.CollegeCodeEntryBox = ttk.Entry(self.frame, font=('Arial', 9), width=35)
 
         # Buttons
-        self.CreateCollgButton = ttk.Button(self.frame, text="Add College", command=self.CreateCollg)
+        if self.WinType == "Add":
+            self.CreateCollgButton   = ttk.Button(self.frame, text="Add College",    command=self.CreateCollg)
+        elif self.WinType == "Edit":
+            self.CreateCollgButton   = ttk.Button(self.frame, text="Confirm Edit",   command=self.CreateCollg)
 
         # GRID SETUP
         self.Header.grid(row=0, column=0, columnspan=6, padx=20, pady=20)
@@ -73,6 +80,7 @@ class CreateCollgWindow:
                 selected_item = self.table.tree.selection()
                 item_values = self.table.tree.item(selected_item, "values")
                 new_item_values = list(item_values)
+                old_college_code = new_item_values[0]
 
                 new_item_values[0] = college_code
                 new_item_values[1] = college_name
@@ -83,6 +91,8 @@ class CreateCollgWindow:
 
                 if selected_row_index:
                     newdataframe.loc[selected_row_index[0]] = new_item_values
+
+                GlobalHash.updatePrograms(old_college_code, college_code)
 
             GlobalDFs.writeCollegesDF(newdataframe)
             self.table.Populate(self.table.tree, newdataframe, "Update")

@@ -1,9 +1,12 @@
 from tkinter import ttk
 import pandas as pd
 import tkinter as tk
-from DATA import GlobalDFs
+from DATA import GlobalDFs, GlobalHash
 from EXCEPTIONS import Exceptions
 
+# ===================
+#   PROGRAM WINDOW
+# ===================
 class CreateProgWindow:
     def __init__(self, table, Wintype):
         self.table = table
@@ -20,7 +23,11 @@ class CreateProgWindow:
         # WIDGETS
 
         # Header
-        self.Header = ttk.Label(self.frame, text="Add a Program", font=('Arial', 20))
+        if self.WinType == "Add":
+            self.Header = ttk.Label(self.frame, text="Add a Program", font=('Arial', 20))
+        elif self.WinType == "Edit":
+            self.Header = ttk.Label(self.frame, text="Edit a Program", font=('Arial', 20))
+        
 
         # Labels
         self.ProgramNameLabel = ttk.Label(self.frame, text="Program Name", font=('Arial', 7))
@@ -36,7 +43,10 @@ class CreateProgWindow:
         self.CollegeEntryBox = ttk.Combobox(self.frame, state="readonly", values=self.collegechoices, width=35)
 
         # Buttons
-        self.CreateProgButton = ttk.Button(self.frame, text="Add Program", command=self.CreateProg)
+        if self.WinType == "Add":
+            self.CreateProgButton   = ttk.Button(self.frame, text="Add Program",    command=self.CreateProg)
+        elif self.WinType == "Edit":
+            self.CreateProgButton   = ttk.Button(self.frame, text="Confirm Edit",   command=self.CreateProg)
 
         # GRID SETUP
         # Row 0
@@ -85,6 +95,7 @@ class CreateProgWindow:
                 selected_item = self.table.tree.selection()
                 item_values = self.table.tree.item(selected_item, "values")
                 new_item_values = list(item_values)
+                old_program_code = new_item_values[0]
 
                 new_item_values[0] = program_code
                 new_item_values[1] = program_name
@@ -92,10 +103,12 @@ class CreateProgWindow:
 
                 newdataframe = GlobalDFs.readProgramsDF()
 
-                selected_row_index = list(newdataframe.index[newdataframe['Program Code'] == item_values[0]])
+                selected_row_index = list(newdataframe.index[newdataframe['Program Code'] == old_program_code])
 
                 if selected_row_index:
                     newdataframe.loc[selected_row_index[0]] = new_item_values
+
+                GlobalHash.updateStudents(old_program_code, program_code)
 
 
             GlobalDFs.writeProgramsDF(newdataframe)
@@ -109,5 +122,6 @@ class CreateProgWindow:
             Exceptions.show_duplicateerror_message(fe)
         except Exception as e:
             Exceptions.show_unexpected_error(e)
-
-
+# ===================
+#   PROGRAM WINDOW
+# ===================

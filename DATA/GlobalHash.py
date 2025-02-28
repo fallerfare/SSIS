@@ -1,4 +1,3 @@
-from collections import defaultdict
 from DATA import GlobalDFs
 
 def StudentHash(dataframe):
@@ -36,3 +35,15 @@ def showConstituents(collegecode):
     for program in showDegrees(collegecode):
         Constituents.append(showEnrolled(program))
     return Constituents
+
+def updateStudents(oldprogramcode, programcode):
+    Students = GlobalDFs.readStudentsDF()
+    Students.loc[Students["Program Code"] == oldprogramcode, "Program Code"] = programcode
+    GlobalDFs.writeStudentsDF(Students)  
+
+
+def updatePrograms(oldcollegecode, collegecode):
+    Programs = GlobalDFs.readProgramsDF()
+    Programs.loc[Programs["College Code"] == oldcollegecode, "College Code"] = collegecode
+    GlobalDFs.writeProgramsDF(Programs)
+

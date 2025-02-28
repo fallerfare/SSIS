@@ -1,12 +1,12 @@
 from tkinter import ttk
 import pandas as pd
 import tkinter as tk
-from DATA import GlobalDFs
+from DATA import GlobalDFs,GlobalHash
 from EXCEPTIONS import Exceptions
 
-# ================
-# ADD BUTTON WINDOW
-# ================
+# ===================
+#   STUDENT WINDOW
+# ===================
 class SignUpWindow:
     def __init__(self, table, Wintype):
         self.table = table
@@ -133,7 +133,7 @@ class SignUpWindow:
         # ================
 
     # ================
-    # SIGNUP
+    # SIGNUP   
 
     def SignUp(self):
         try:
@@ -200,6 +200,7 @@ class SignUpWindow:
 
                 if selected_row_index:
                     newdataframe.loc[selected_row_index[0]] = new_item_values
+
             # If window was called by EDIT Button
 
             # Rewrite dataframe
@@ -218,7 +219,6 @@ class SignUpWindow:
 
     # SIGNUP
     # ================
-
-# ================
-# ADD BUTTON WINDOW
-# ================
+# ===================
+#   STUDENT WINDOW
+# ===================

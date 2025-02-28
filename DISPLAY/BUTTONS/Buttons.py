@@ -3,6 +3,9 @@ import DISPLAY.BUTTONS.Add as Add
 import DISPLAY.BUTTONS.Remove as Remove
 import DISPLAY.BUTTONS.Edit as Edit
 
+# =========================
+#     BUTTONS FUNCTIONS
+# =========================
 class Buttons:
 
     def __init__(self, root, dataframe, table):
@@ -15,17 +18,18 @@ class Buttons:
 
     def createbuttons(self):
         
-        self.enroll_button = Add.Add(self.root, self.dataframe, self.table)  
-        self.remove_button = Remove.Remove(self.root, self.dataframe, self.table)  
-        self.edit_button = Edit.Edit(self.root, self.dataframe, self.table)  
+        self.enroll_button  = Add.Add(      self.root, self.dataframe, self.table)  
+        self.remove_button  = Remove.Remove(self.root, self.dataframe, self.table)  
+        self.edit_button    = Edit.Edit(    self.root, self.dataframe, self.table)  
 
-        self.remove_button.Button.config(state="disabled")
-        self.edit_button.Button.config(state="disabled")
+        self.remove_button.Button.config(   state="disabled")
+        self.edit_button.Button.config(     state="disabled")
 
-        self.enroll_button.Button.grid(row=0, column=0, padx=10)
-        self.remove_button.Button.grid(row=0, column=1, padx=10)
-        self.edit_button.Button.grid(row=0, column=2, padx=10)
+        self.enroll_button.Button.grid(     row=0, column=0, padx=10)
+        self.remove_button.Button.grid(     row=0, column=1, padx=10)
+        self.edit_button.Button.grid(       row=0, column=2, padx=10)
 
+    # Activate Remove and Edit Buttons once treeview has a selected item
     def on_select(self, event):
         
         self.selected_item = self.tree.selection()
@@ -39,7 +43,6 @@ class Buttons:
             
             # Debugging
             # print(f"Selected: {selected_value}")
-
-        else:
-            self.remove_button.Button.config(state="disabled")
-            self.edit_button.Button.config(state="disabled")
+# =========================
+#     BUTTONS FUNCTIONS
+# =========================

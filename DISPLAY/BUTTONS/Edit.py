@@ -1,6 +1,6 @@
 from tkinter import ttk
 from DISPLAY.WINDOWS import SignUp, CreateCollg, CreateProg
-from DATA import GlobalDFs
+from DATA import GlobalDFs, GlobalHash
 
 # =====================
 #    EDIT BUTTON
