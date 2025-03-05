@@ -5,9 +5,10 @@ from DATA import GlobalDFs, GlobalHash
 from EXCEPTIONS import Exceptions
 
 class CreateCollgWindow:
-    def __init__(self, table, Wintype):
+    def __init__(self, table, Wintype, ProgramsTab = None):
         self.table = table
         self.WinType = Wintype
+        self.ProgramsTab = ProgramsTab
 
         self.root = tk.Toplevel()
         self.root.geometry("900x400")
@@ -106,11 +107,9 @@ class CreateCollgWindow:
 
             GlobalDFs.writeCollegesDF(newdataframe)
             self.table.Populate(self.table.tree, newdataframe, "Update")    
+            self.ProgramsTab.table.Populate(self.ProgramsTab.table.Populate, GlobalDFs.readProgramsDF(self.ProgramsTab.table.dataframe), "Update")
 
             self.root.destroy()
-
-            self.root.wait_window(self.root)
-
 
         except ValueError as ve:
             Exceptions.show_inputerror_message(ve)

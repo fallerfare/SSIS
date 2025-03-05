@@ -215,8 +215,6 @@ class SignUpWindow:
             # Close 
             self.root.destroy()
 
-            self.root.wait_window(self.root)
-
         except ValueError as ve:
             Exceptions.show_inputerror_message(ve)
         except FileExistsError as fe:
