@@ -1,4 +1,4 @@
-from tkinter import ttk
+from tkinter import ttk, messagebox
 from DATA import GlobalDFs
 from DATA import GlobalHash
 from EXCEPTIONS import Exceptions
@@ -19,18 +19,15 @@ class Remove:
         # Format Remove Button according to tab
         match self.column_name:  
             case "ID":
-                command = self.remove_entry
                 buttext = "Remove Student"
             case "Program Code":
-                command = self.remove_entry
                 buttext = "Remove Program"
             case "College Code":
-                command = self.remove_entry
                 buttext = "Remove College"
             case _:
                 buttext = "What, no button???"
 
-        self.Button = ttk.Button(self.root, text=buttext, command=command, state="disabled")
+        self.Button = ttk.Button(self.root, text=buttext, command=self.confirmRemove, state="disabled")
 
     # we removin dis guy
     # accessed by treeviewselect
@@ -39,6 +36,13 @@ class Remove:
 
         # Debugging
         # print("Setting: " + self.removekey)
+
+    def confirmRemove(self):
+        confirm = messagebox.askyesno("Confirm", "Confirm Remove?")
+        if confirm is True:
+            self.remove_entry()
+        elif confirm is False:
+            return
 
     # dis guy be removed
     def remove_entry(self):

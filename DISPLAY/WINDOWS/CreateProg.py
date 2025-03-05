@@ -20,6 +20,10 @@ class CreateProgWindow:
         self.frame = ttk.Frame(self.root)
         self.frame.pack(padx=20, pady=20, anchor="center")
 
+        self.root.grab_set() 
+        self.root.focus_set()  
+        self.root.transient() 
+
         # WIDGETS
 
         # Header
@@ -48,6 +52,9 @@ class CreateProgWindow:
         elif self.WinType == "Edit":
             self.CreateProgButton   = ttk.Button(self.frame, text="Confirm Edit",   command=self.CreateProg)
 
+        self.cancelAction           = ttk.Button(self.frame, text="Cancel",         command=self.root.destroy)
+
+
         # GRID SETUP
         # Row 0
         self.Header.grid(row=0, column=0, columnspan=6, padx=20, pady=20)
@@ -63,7 +70,8 @@ class CreateProgWindow:
         self.CollegeLabel.grid(row=2, column=4, columnspan=2, padx=5, pady=1, sticky='w')
 
         # Row 7
-        self.CreateProgButton.grid(row=7, column=4, columnspan=2, padx=5, pady=2, sticky='e')
+        self.cancelAction.grid(     row=7, column=4,                       pady=8, sticky='e')
+        self.CreateProgButton.grid(     row=7, column=5,                       pady=8, sticky='e')
 
         self.root.mainloop()
 
@@ -79,23 +87,24 @@ class CreateProgWindow:
                                         "College Code" : (college_code, Exceptions.CodeEntry)
             })  
 
-            Exceptions.validate_programduplicates(program_code)
-
             if self.WinType == "Add":
+                Exceptions.validate_programduplicates(program_code)
                 newProgramdata = {
                     'Program Name': [program_name],
                     'Program Code': [program_code],
                     'College Code': [college_code]
                 }
-
                 newProgramdf = pd.DataFrame(newProgramdata)
                 newdataframe = pd.concat([GlobalDFs.readProgramsDF(), newProgramdf], ignore_index=True)
-
+                
+                
             elif self.WinType == "Edit":
                 selected_item = self.table.tree.selection()
                 item_values = self.table.tree.item(selected_item, "values")
                 new_item_values = list(item_values)
                 old_program_code = new_item_values[0]
+                Exceptions.validate_programduplicates(program_code, edit = True, currentprogram = old_program_code)
+
 
                 new_item_values[0] = program_code
                 new_item_values[1] = program_name
@@ -104,17 +113,16 @@ class CreateProgWindow:
                 newdataframe = GlobalDFs.readProgramsDF()
 
                 selected_row_index = list(newdataframe.index[newdataframe['Program Code'] == old_program_code])
+                newdataframe.loc[selected_row_index[0]] = new_item_values
 
-                if selected_row_index:
-                    newdataframe.loc[selected_row_index[0]] = new_item_values
-
-                GlobalHash.updateStudents(old_program_code, program_code)
-
-
+                GlobalHash.updateStudents(old_program_code, program_code)                
+                 
             GlobalDFs.writeProgramsDF(newdataframe)
             self.table.Populate(self.table.tree, newdataframe, "Update")
 
             self.root.destroy()
+            
+            self.root.wait_window(self.root)
         
         except ValueError as ve:
             Exceptions.show_inputerror_message(ve)

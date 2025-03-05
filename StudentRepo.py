@@ -30,13 +30,17 @@ if __name__ =="__main__":
       notebook = ttk.Notebook(window.root)
       notebook.pack(padx = 35, pady = 35, anchor= "center")
 
-      StudentsFrame = Repo(notebook, notebook, GlobalDFs.readStudentsDF()).returnFrame() # Students Tab
-      ProgramsFrame = Repo(notebook, notebook, GlobalDFs.readProgramsDF()).returnFrame() # Programs Tab
-      CollegesFrame = Repo(notebook, notebook, GlobalDFs.readCollegesDF()).returnFrame() # Colleges Tab
+      Students = Repo(notebook, notebook, GlobalDFs.readStudentsDF()) # Students Tab
+      Programs = Repo(notebook, notebook, GlobalDFs.readProgramsDF()) # Programs Tab
+      Colleges = Repo(notebook, notebook, GlobalDFs.readCollegesDF()) # Colleges Tab
+      # def edit(event):
+      #       print("Button pressed")
+      
+      # Colleges.button.edit_button.Button.bind("<<ButtonRelease-1>>", lambda: edit)
 
-      notebook.add(StudentsFrame, text="Students")
-      notebook.add(ProgramsFrame, text="Programs")
-      notebook.add(CollegesFrame, text="Colleges")
+      notebook.add(Students.returnFrame(), text="Students")
+      notebook.add(Programs.returnFrame(), text="Programs")
+      notebook.add(Colleges.returnFrame(), text="Colleges")
 
       window.root.mainloop()
 # =======================

@@ -43,21 +43,39 @@ def validate_collegeremove(removekey):
     if GlobalHash.showConstituents(removekey):
         raise PermissionError("There are still Students currently enrolled!\nPlease Edit or Unenroll them First.")   
     
-def validate_studentduplicates(duplicatekey):
+def validate_studentduplicates(duplicatekey, edit=False, currentstudent=None):
     Students = GlobalDFs.readStudentsDF()
-    if (Students['ID'] == duplicatekey).sum() > 0:
+    
+    if edit and currentstudent:  
+        students_tovalidatedupe = Students[Students['ID'] != currentstudent]
+    else:
+        students_tovalidatedupe = Students
+
+    if (students_tovalidatedupe['ID'] == duplicatekey).sum() > 0:
         raise FileExistsError(f"Student with ID {duplicatekey} already exists!")
 
-def validate_programduplicates(duplicatekey):
+
+def validate_programduplicates(duplicatekey, edit=False, currentprogram=None):
     Programs = GlobalDFs.readProgramsDF()
-    if (Programs['Program Code'] == duplicatekey).sum() > 0:
+
+    if edit and currentprogram:
+        programs_tovalidatedupe = Programs[Programs['Program Code'] != currentprogram]
+    else:
+        programs_tovalidatedupe = Programs
+
+    if (programs_tovalidatedupe['Program Code'] == duplicatekey).sum() > 0:
         raise FileExistsError(f"Program with code {duplicatekey} already exists!")
     
-def validate_collegeduplicates(duplicatekey):
+def validate_collegeduplicates(duplicatekey, edit=False, currentcollege=None):
     Colleges = GlobalDFs.readCollegesDF()
-    if (Colleges['College Code'] == duplicatekey).sum() > 0:
+
+    if edit and currentcollege:
+        colleges_tovalidatedupe = Colleges[Colleges['College Code'] != currentcollege]
+    else:
+        colleges_tovalidatedupe = Colleges
+        
+    if ((colleges_tovalidatedupe['College Code'] == duplicatekey).sum() > 0):
         raise FileExistsError(f"College with code {duplicatekey} already exists!")
-    
 
 # =======================
 #      CHECK INPUTS

@@ -1,7 +1,7 @@
 from tkinter import ttk
 import pandas as pd
 import tkinter as tk
-from DATA import GlobalDFs,GlobalHash
+from DATA import GlobalDFs
 from EXCEPTIONS import Exceptions
 
 # ===================
@@ -20,6 +20,9 @@ class SignUpWindow:
         self.root.resizable(width=False, height=False)
         self.frame = ttk.Frame(self.root)
         self.frame.pack(padx=20, pady=20, anchor="center")
+        self.root.grab_set() 
+        self.root.focus_set()  
+        self.root.transient() 
 
         # MAIN WINDOW
         # ================
@@ -86,6 +89,8 @@ class SignUpWindow:
         elif self.WinType == "Edit":
             self.SignUpButton   = ttk.Button(self.frame, text="Confirm Edit",   command=self.SignUp)
 
+        self.cancelAction       = ttk.Button(self.frame, text="Cancel",         command=self.root.destroy)
+
         # WIDGETS
         # ================
 
@@ -125,7 +130,8 @@ class SignUpWindow:
         self.YearLabel.grid(        row=6, column=4, columnspan=2, padx=5, pady=1, sticky='w')
 
         # Row 7
-        self.SignUpButton.grid(     row=7, column=4, columnspan=2, padx=5, pady=2, sticky='e')
+        self.cancelAction.grid(     row=7, column=4,                       pady=8, sticky='e')
+        self.SignUpButton.grid(     row=7, column=5,                       pady=8, sticky='e')
 
         self.root.mainloop()
 
@@ -160,11 +166,10 @@ class SignUpWindow:
             })
             # Check entries' formats
 
-            # Check entrie's duplicates
-            Exceptions.validate_studentduplicates(ID_number)
-
             # If window was called by ADD Button
             if(self.WinType == "Add"):
+                Exceptions.validate_studentduplicates(ID_number)
+
                 newStudentdata = {
                     'ID'            : [ID_number],
                     'First Name'    : [first_name],
@@ -176,8 +181,9 @@ class SignUpWindow:
                 }
 
                 newStudentdf = pd.DataFrame(newStudentdata)
-
                 newdataframe = pd.concat([GlobalDFs.readStudentsDF(), newStudentdf], ignore_index=True)
+                # Rewrite dataframe
+
             # If window was called by ADD Button
 
             # If window was called by EDIT Button
@@ -185,6 +191,10 @@ class SignUpWindow:
                 selected_item = self.table.tree.selection()
                 item_values = self.table.tree.item(selected_item, "values")
                 new_item_values = list(item_values)
+                old_ID_number = new_item_values[0]
+
+                Exceptions.validate_studentduplicates(ID_number, edit = True, currentstudent = old_ID_number)
+
 
                 new_item_values[0] = ID_number
                 new_item_values[1] = first_name
@@ -197,18 +207,15 @@ class SignUpWindow:
                 newdataframe = GlobalDFs.readStudentsDF()
 
                 selected_row_index = list(newdataframe.index[newdataframe['ID'] == item_values[0]])
-
-                if selected_row_index:
-                    newdataframe.loc[selected_row_index[0]] = new_item_values
-
-            # If window was called by EDIT Button
-
-            # Rewrite dataframe
+                newdataframe.loc[selected_row_index[0]] = new_item_values
+                # Rewrite dataframe
+               
             GlobalDFs.writeStudentsDF(newdataframe)
             self.table.Populate(self.table.tree, newdataframe, "Update")
-
             # Close 
             self.root.destroy()
+
+            self.root.wait_window(self.root)
 
         except ValueError as ve:
             Exceptions.show_inputerror_message(ve)

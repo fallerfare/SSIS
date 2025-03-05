@@ -16,6 +16,10 @@ class CreateCollgWindow:
         self.frame = ttk.Frame(self.root)
         self.frame.pack(padx=20, pady=20, anchor="center")
 
+        self.root.grab_set() 
+        self.root.focus_set()  
+        self.root.transient() 
+
         # WIDGETS
         # Header
         if self.WinType == "Add":
@@ -37,6 +41,9 @@ class CreateCollgWindow:
         elif self.WinType == "Edit":
             self.CreateCollgButton   = ttk.Button(self.frame, text="Confirm Edit",   command=self.CreateCollg)
 
+        self.cancelAction           = ttk.Button(self.frame, text="Cancel",         command=self.root.destroy)
+
+
         # GRID SETUP
         self.Header.grid(row=0, column=0, columnspan=6, padx=20, pady=20)
 
@@ -46,10 +53,12 @@ class CreateCollgWindow:
 
         # Row 2
         self.CollegeNameLabel.grid(row=2, column=0, columnspan=2, padx=5, pady=1, sticky='w')
+        
         self.CollegeCodeLabel.grid(row=2, column=2, columnspan=2, padx=5, pady=1, sticky='w')
-
+        
         # Row 7
-        self.CreateCollgButton.grid(row=7, column=4, columnspan=2, padx=5, pady=2, sticky='e')
+        self.cancelAction.grid(     row=7, column=2,                       pady=8, sticky='e')
+        self.CreateCollgButton.grid(     row=7, column=3,                       pady=8, sticky='e')
 
         self.root.mainloop()
 
@@ -64,10 +73,10 @@ class CreateCollgWindow:
                                         "College Code" : (college_code, Exceptions.CodeEntry)
 
             })
-
-            Exceptions.validate_collegeduplicates(college_code)
-
+            
             if self.WinType == "Add":
+
+                Exceptions.validate_collegeduplicates(college_code)
                 newCollegedata = {
                 'College Name': [college_name],
                 'College Code': [college_code]
@@ -75,6 +84,7 @@ class CreateCollgWindow:
 
                 newCollegedf = pd.DataFrame(newCollegedata)
                 newdataframe = pd.concat([GlobalDFs.readCollegesDF(), newCollegedf], ignore_index=True)
+                    
 
             elif self.WinType == "Edit":
                 selected_item = self.table.tree.selection()
@@ -82,22 +92,25 @@ class CreateCollgWindow:
                 new_item_values = list(item_values)
                 old_college_code = new_item_values[0]
 
+                Exceptions.validate_collegeduplicates(college_code, edit = True, currentcollege = old_college_code)
+
                 new_item_values[0] = college_code
                 new_item_values[1] = college_name
 
                 newdataframe = GlobalDFs.readCollegesDF()
 
                 selected_row_index = list(newdataframe.index[newdataframe['College Code'] == item_values[0]])
-
-                if selected_row_index:
-                    newdataframe.loc[selected_row_index[0]] = new_item_values
+                newdataframe.loc[selected_row_index[0]] = new_item_values
 
                 GlobalHash.updatePrograms(old_college_code, college_code)
 
             GlobalDFs.writeCollegesDF(newdataframe)
-            self.table.Populate(self.table.tree, newdataframe, "Update")
+            self.table.Populate(self.table.tree, newdataframe, "Update")    
 
             self.root.destroy()
+
+            self.root.wait_window(self.root)
+
 
         except ValueError as ve:
             Exceptions.show_inputerror_message(ve)

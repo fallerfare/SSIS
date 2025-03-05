@@ -33,13 +33,13 @@ def readCollegesDF():
 def updateDF(dataframe):
     
     match(dataframe.columns[0]):
-            case("ID"):
+            case(r"ID"):
                 newdataframe = readStudentsDF()
 
-            case("Program Code"):
+            case(r"Program Code"):
                 newdataframe = readProgramsDF()
 
-            case("College Code"):
+            case(r"College Code"):
                 newdataframe = readCollegesDF()
     
     return newdataframe

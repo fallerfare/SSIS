@@ -9,13 +9,16 @@ class Repo:
         self.root = root
         self.notebook = notebook
         self.dataframe = GlobalDFs.updateDF(dataframe)
-
-        self.headers = list(dataframe.columns)
-
+        
         # Table Display
         self.RepoTable = ttk.Frame(self.root, width=990, height=600)  
         self.RepoTable.grid_rowconfigure(0, weight=1) 
         self.RepoTable.grid_columnconfigure(0, weight=1)
+
+        self.createitems()
+
+    def createitems(self):
+        # Display Elements
 
         # Search Display
         self.searchpane = ttk.Frame(self.RepoTable)
@@ -29,10 +32,14 @@ class Repo:
         self.buttonframe = ttk.Frame(self.RepoTable)
         self.buttonframe.grid(row = 3, column=0, sticky="e", pady=15)
 
-        # Display Elements
+        self.dataframe = GlobalDFs.updateDF(self.dataframe)
+
+        # Create items
         self.table = Table(self.tablepane, self.dataframe, self.notebook)
         self.search = Filter(self.searchpane, self.dataframe, self.table)
         self.button = Buttons(self.buttonframe, self.dataframe, self.table)
+
+        self.table.dataframe = GlobalDFs.updateDF(self.table.dataframe)
 
     def returnFrame(self):
         return self.RepoTable

@@ -11,13 +11,13 @@ class Table():
                 self.notebook = notebook
 
                 # Scrollbar
-                treeScroll = ttk.Scrollbar(root)
-                treeScroll.pack(side="right", fill='y', anchor="center")
+                self.treeScroll = ttk.Scrollbar(root)
+                self.treeScroll.pack(side="right", fill='y', anchor="center")
 
                 # Treeview
                 self.tree = ttk.Treeview(root,  selectmode =        "browse", 
                                                 show =              'headings', 
-                                                yscrollcommand =    treeScroll.set, 
+                                                yscrollcommand =    self.treeScroll.set, 
                                                 style =             "Treeview"
                                         )
                 self.tree['columns'] = list(self.dataframe.columns)
@@ -29,7 +29,7 @@ class Table():
                 self.Populate(self.tree, self.dataframe, "Update")
 
                 self.tree.pack(side="left", fill="both", anchor = "center", expand=True)
-                treeScroll.config(command=self.tree.yview)
+                self.treeScroll.config(command=self.tree.yview)
 
         # Separate populating function to be accessed by other functions
         def Populate(self, tree, dataframe, source):
@@ -48,6 +48,7 @@ class Table():
                                         tree.insert("", "end", values=list(row), tags=('oddrow', ))
 
                 if(source == "Update"):
+                        self.dataframe = GlobalDFs.updateDF(self.dataframe)
                         for index, row in self.dataframe.iterrows():
                                 if index % 2 == 0:
                                         tree.insert("", "end", values=list(row), tags=('evenrow', ))
