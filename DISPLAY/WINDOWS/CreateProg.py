@@ -120,9 +120,8 @@ class CreateProgWindow:
                  
             GlobalDFs.writeProgramsDF(newdataframe)
             self.table.Populate(self.table.tree, newdataframe, "Update")
-            self.Studentstab.table.Populate(self.Studentstab.table.Populate, GlobalDFs.readStudentsDF(self.Studentstab.table.dataframe), "Update")
-
             self.root.destroy()
+            
         
         except ValueError as ve:
             Exceptions.show_inputerror_message(ve)

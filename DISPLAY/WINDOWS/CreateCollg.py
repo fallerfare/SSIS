@@ -107,7 +107,6 @@ class CreateCollgWindow:
 
             GlobalDFs.writeCollegesDF(newdataframe)
             self.table.Populate(self.table.tree, newdataframe, "Update")    
-            self.ProgramsTab.table.Populate(self.ProgramsTab.table.Populate, GlobalDFs.readProgramsDF(self.ProgramsTab.table.dataframe), "Update")
 
             self.root.destroy()
 
