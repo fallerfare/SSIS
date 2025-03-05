@@ -8,9 +8,10 @@ from EXCEPTIONS import Exceptions
 #   PROGRAM WINDOW
 # ===================
 class CreateProgWindow:
-    def __init__(self, table, Wintype):
+    def __init__(self, table, Wintype, StudentsTab = None):
         self.table = table
         self.WinType = Wintype
+        self.Studentstab = StudentsTab
 
         # MAIN WINDOW
         self.root = tk.Toplevel()
@@ -119,10 +120,9 @@ class CreateProgWindow:
                  
             GlobalDFs.writeProgramsDF(newdataframe)
             self.table.Populate(self.table.tree, newdataframe, "Update")
+            self.Studentstab.table.Populate(self.Studentstab.table.Populate, GlobalDFs.readStudentsDF(self.Studentstab.table.dataframe), "Update")
 
             self.root.destroy()
-            
-            self.root.wait_window(self.root)
         
         except ValueError as ve:
             Exceptions.show_inputerror_message(ve)
