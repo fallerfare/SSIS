@@ -9,7 +9,6 @@ class Repo:
         self.root = root
         self.notebook = notebook
         self.dataframe = GlobalDFs.updateDF(dataframe)
-        
         # Table Display
         self.RepoTable = ttk.Frame(self.root, width=990, height=600)  
         self.RepoTable.grid_rowconfigure(0, weight=1) 

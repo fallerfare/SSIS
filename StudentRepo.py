@@ -33,10 +33,6 @@ if __name__ =="__main__":
       Students = Repo(notebook, notebook, GlobalDFs.readStudentsDF()) # Students Tab
       Programs = Repo(notebook, notebook, GlobalDFs.readProgramsDF()) # Programs Tab
       Colleges = Repo(notebook, notebook, GlobalDFs.readCollegesDF()) # Colleges Tab
-      # def edit(event):
-      #       print("Button pressed")
-      
-      # Colleges.button.edit_button.Button.bind("<<ButtonRelease-1>>", lambda: edit)
 
       notebook.add(Students.returnFrame(), text="Students")
       notebook.add(Programs.returnFrame(), text="Programs")
