@@ -7,6 +7,8 @@ from EXCEPTIONS import Exceptions
 class CreateCollgWindow:
     def __init__(self, table, Wintype, ProgramsTab = None):
         self.table = table
+        self.selectedtab = self.table.tree.selection()
+        self.item_values = self.table.tree.item(self.selectedtab, "values")
         self.WinType = Wintype
         self.ProgramsTab = ProgramsTab
 
@@ -32,9 +34,18 @@ class CreateCollgWindow:
         self.CollegeNameLabel = ttk.Label(self.frame, text="College Name", font=('Arial', 7))
         self.CollegeCodeLabel = ttk.Label(self.frame, text="College Code", font=('Arial', 7))
 
+        # Autofilled for Edit
+        if self.WinType == "Edit":
+            self.CollegeNameVar = tk.StringVar(value=self.item_values[1])
+            self.CollegeCodeVar = tk.StringVar(value=self.item_values[0])
+        else:
+            self.CollegeNameVar = tk.StringVar()
+            self.CollegeCodeVar = tk.StringVar()
+
         # EntryBoxes
-        self.CollegeNameEntryBox = ttk.Entry(self.frame, font=('Arial', 9), width=35)
-        self.CollegeCodeEntryBox = ttk.Entry(self.frame, font=('Arial', 9), width=35)
+        self.CollegeNameEntryBox = ttk.Entry(self.frame, font=('Arial', 9), width=35, textvariable=self.CollegeNameVar)
+        self.CollegeCodeEntryBox = ttk.Entry(self.frame, font=('Arial', 9), width=35, textvariable=self.CollegeCodeVar)
+
 
         # Buttons
         if self.WinType == "Add":
@@ -88,9 +99,8 @@ class CreateCollgWindow:
                     
 
             elif self.WinType == "Edit":
-                selected_item = self.table.tree.selection()
-                item_values = self.table.tree.item(selected_item, "values")
-                new_item_values = list(item_values)
+                
+                new_item_values = list(self.item_values)
                 old_college_code = new_item_values[0]
 
                 Exceptions.validate_collegeduplicates(college_code, edit = True, currentcollege = old_college_code)
@@ -100,10 +110,11 @@ class CreateCollgWindow:
 
                 newdataframe = GlobalDFs.readCollegesDF()
 
-                selected_row_index = list(newdataframe.index[newdataframe['College Code'] == item_values[0]])
+                selected_row_index = list(newdataframe.index[newdataframe['College Code'] == self.item_values[0]])
                 newdataframe.loc[selected_row_index[0]] = new_item_values
 
                 GlobalHash.updatePrograms(old_college_code, college_code)
+                GlobalHash.updateConstituents(old_college_code, college_code)
 
             GlobalDFs.writeCollegesDF(newdataframe)
             self.table.Populate(self.table.tree, newdataframe, "Update")    

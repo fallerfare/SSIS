@@ -10,6 +10,8 @@ from EXCEPTIONS import Exceptions
 class SignUpWindow:
     def __init__(self, table, Wintype):
         self.table = table
+        self.selectedtab = self.table.tree.selection()
+        self.item_values = self.table.tree.item(self.selectedtab, "values")
         self.WinType = Wintype
 
         # ================
@@ -44,11 +46,32 @@ class SignUpWindow:
         self.ProgramLabel       = ttk.Label(self.frame, text="Program",                 font=('Arial', 7))
         self.YearLabel          = ttk.Label(self.frame, text="Year Level",              font=('Arial', 7))
 
+        # Autofilled for Edit
+        if self.WinType == "Edit":
+            self.IDVar = tk.StringVar(value=self.item_values[0])
+            self.FirstNameVar = tk.StringVar(value=self.item_values[1])
+            self.LastNameVar = tk.StringVar(value=self.item_values[2])
+            self.EmailVar = tk.StringVar(value=self.item_values[3])
+            self.YearVar = tk.StringVar(value=self.item_values[4])
+            self.GenderVar = tk.StringVar(value=self.item_values[5]) 
+            self.ProgramVar = tk.StringVar(value=self.item_values[6])
+            self.CollegeVar = tk.StringVar(value=self.item_values[7])
+            
+        else:
+            self.FirstNameVar = tk.StringVar()
+            self.LastNameVar = tk.StringVar()
+            self.EmailVar = tk.StringVar()
+            self.IDVar = tk.StringVar()
+            self.CollegeVar = tk.StringVar()
+            self.ProgramVar = tk.StringVar()
+            self.YearVar = tk.StringVar()
+            self.GenderVar = tk.StringVar()
+
         # Entry Boxes
-        self.FirstNameEntryBox  = ttk.Entry(self.frame, width=35,                       font=('Arial', 9))
-        self.LastNameEntryBox   = ttk.Entry(self.frame, width=35,                       font=('Arial', 9))
-        self.EmailEntryBox      = ttk.Entry(self.frame, width=35,                       font=('Arial', 9))
-        self.IDEntryBox         = ttk.Entry(self.frame, width=35,                       font=('Arial', 9))
+        self.FirstNameEntryBox  = ttk.Entry(self.frame, width=35,                       font=('Arial', 9), textvariable=self.FirstNameVar)
+        self.LastNameEntryBox   = ttk.Entry(self.frame, width=35,                       font=('Arial', 9), textvariable=self.LastNameVar)
+        self.EmailEntryBox      = ttk.Entry(self.frame, width=35,                       font=('Arial', 9), textvariable=self.EmailVar)
+        self.IDEntryBox         = ttk.Entry(self.frame, width=35,                       font=('Arial', 9), textvariable=self.IDVar)
 
         # Dropdowns
         self.collegechoices = list(GlobalDFs.readCollegesDF()['College Code'])
@@ -65,23 +88,23 @@ class SignUpWindow:
 
         self.CollegeEntryBox    = ttk.Combobox( self.frame, state="readonly",
                                                 values=self.collegechoices,
-                                            width=35)
+                                                width=35, textvariable=self.CollegeVar)
 
         self.CollegeEntryBox.bind("<<ComboboxSelected>>", collegechosen)
 
         self.ProgramEntryBox    = ttk.Combobox( self.frame, state="readonly",
                                                 values=self.programchoices,
-                                                width=35)
+                                                width=35, textvariable=self.ProgramVar)
 
         self.YearEntryBox       = ttk.Combobox( self.frame, state="readonly",
                                                 values=["1st Year", "2nd Year",
                                                         "3rd Year", "4th Year",
                                                         "5th Year and Above"],
-                                                width=35)
+                                                width=35, textvariable=self.YearVar)
 
         self.GenderEntryBox     = ttk.Combobox( self.frame, state="readonly",
                                                 values=["Male", "Female", "Other"],
-                                                width=35)
+                                                width=35, textvariable=self.GenderVar)
         
         # Buttons
         if self.WinType == "Add":
@@ -152,6 +175,7 @@ class SignUpWindow:
             year_level = self.YearEntryBox.get().strip()
             gender = self.GenderEntryBox.get().strip()
             program_code = self.ProgramEntryBox.get().strip()
+            college_code = self.CollegeEntryBox.get().strip()
             # Get and clean entries
 
             # Check entries' formats
@@ -162,7 +186,8 @@ class SignUpWindow:
                     "Email"         : (email,Exceptions.EmailEntry),
                     "Year Level"    : (year_level, Exceptions.YearEntry),
                     "Gender"        : (gender, Exceptions.NormalEntry),
-                    "Program Code"  : (program_code, Exceptions.CodeEntry)
+                    "Program Code"  : (program_code, Exceptions.CodeEntry),
+                    "College Code"  : (college_code, Exceptions.CodeEntry)
             })
             # Check entries' formats
 
@@ -177,7 +202,8 @@ class SignUpWindow:
                     'Email'         : [email],
                     'Year Level'    : [year_level],
                     'Gender'        : [gender],
-                    'Program Code'  : [program_code]
+                    'Program Code'  : [program_code],
+                    'College Code'  : [college_code]
                 }
 
                 newStudentdf = pd.DataFrame(newStudentdata)
@@ -203,6 +229,7 @@ class SignUpWindow:
                 new_item_values[4] = year_level  
                 new_item_values[5] = gender     
                 new_item_values[6] = program_code
+                new_item_values[7] = college_code
 
                 newdataframe = GlobalDFs.readStudentsDF()
 

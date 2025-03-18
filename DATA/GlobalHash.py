@@ -41,6 +41,10 @@ def updateStudents(oldprogramcode, programcode):
     Students.loc[Students["Program Code"] == oldprogramcode, "Program Code"] = programcode
     GlobalDFs.writeStudentsDF(Students)  
 
+def updateConstituents(oldcollegecode, collegecode):
+    Students = GlobalDFs.readStudentsDF()
+    Students.loc[Students["College Code"] == oldcollegecode, "College Code"] = collegecode
+    GlobalDFs.writeStudentsDF(Students)  
 
 def updatePrograms(oldcollegecode, collegecode):
     Programs = GlobalDFs.readProgramsDF()

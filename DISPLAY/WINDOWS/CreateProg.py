@@ -10,6 +10,8 @@ from EXCEPTIONS import Exceptions
 class CreateProgWindow:
     def __init__(self, table, Wintype, StudentsTab = None):
         self.table = table
+        self.selectedtab = self.table.tree.selection()
+        self.item_values = self.table.tree.item(self.selectedtab, "values")
         self.WinType = Wintype
         self.Studentstab = StudentsTab
 
@@ -39,13 +41,23 @@ class CreateProgWindow:
         self.ProgramCodeLabel = ttk.Label(self.frame, text="Program Code", font=('Arial', 7))
         self.CollegeLabel = ttk.Label(self.frame, text="College", font=('Arial', 7))
 
+        # Autofilled for Edit
+        if self.WinType == "Edit":
+            self.ProgramNameVar = tk.StringVar(value=self.item_values[1])
+            self.ProgramCodeVar = tk.StringVar(value=self.item_values[0])
+            self.CollegeCodeVar = tk.StringVar(value=self.item_values[2])
+        else:
+            self.ProgramNameVar = tk.StringVar()
+            self.ProgramCodeVar = tk.StringVar()
+            self.CollegeCodeVar = tk.StringVar()
+
         # EntryBoxes
-        self.ProgramNameEntryBox = ttk.Entry(self.frame, font=('Arial', 9), width=35)
-        self.ProgramCodeEntryBox = ttk.Entry(self.frame, font=('Arial', 9), width=35)
+        self.ProgramNameEntryBox = ttk.Entry(self.frame, font=('Arial', 9), width=35, textvariable=self.ProgramNameVar)
+        self.ProgramCodeEntryBox = ttk.Entry(self.frame, font=('Arial', 9), width=35, textvariable=self.ProgramCodeVar)
 
         # Dropdowns
         self.collegechoices = list(GlobalDFs.readCollegesDF()['College Code'])
-        self.CollegeEntryBox = ttk.Combobox(self.frame, state="readonly", values=self.collegechoices, width=35)
+        self.CollegeEntryBox = ttk.Combobox(self.frame, state="readonly", values=self.collegechoices, width=35, textvariable=self.CollegeCodeVar)
 
         # Buttons
         if self.WinType == "Add":
@@ -100,9 +112,7 @@ class CreateProgWindow:
                 
                 
             elif self.WinType == "Edit":
-                selected_item = self.table.tree.selection()
-                item_values = self.table.tree.item(selected_item, "values")
-                new_item_values = list(item_values)
+                new_item_values = list(self.item_values)
                 old_program_code = new_item_values[0]
                 Exceptions.validate_programduplicates(program_code, edit = True, currentprogram = old_program_code)
 
@@ -113,7 +123,7 @@ class CreateProgWindow:
 
                 newdataframe = GlobalDFs.readProgramsDF()
 
-                selected_row_index = list(newdataframe.index[newdataframe['Program Code'] == old_program_code])
+                selected_row_index = list(newdataframe.index[newdataframe['Program Code'] == self.item_values[0]])
                 newdataframe.loc[selected_row_index[0]] = new_item_values
 
                 GlobalHash.updateStudents(old_program_code, program_code)                

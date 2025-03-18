@@ -46,6 +46,10 @@ class Buttons:
             
             # Debugging
             # print(f"Selected: {selected_value}")
+        
+        else: 
+            self.remove_button.Button.config(state="disabled")
+            self.edit_button.Button.config(state="disabled")
 # =========================
 #     BUTTONS FUNCTIONS
 # =========================
